@@ -7,7 +7,7 @@ export default defineUserConfig({
   description: "一个博客，主要分享前端知识~😊",
   base: '/noniBlog/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: './favicon.ico' }]
   ],
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
