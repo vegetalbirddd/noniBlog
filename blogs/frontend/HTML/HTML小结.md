@@ -24,7 +24,7 @@ src主要应用于img、script、iframe等元素，href应用于link和a等元�
 
 >link和@import都是外部引用CSS的方式，script适用于引入 JavaScript 文件或内嵌 JavaScript 代码。
 
-><link> 标签和 <script> 标签是 HTML 标签，而 @import 是 CSS 规则。
+>`<link>` 标签和 `<script>` 标签是 HTML 标签，而 @import 是 CSS 规则。
 
 **问：DOCTYPE（文档类型）的作用**
 
