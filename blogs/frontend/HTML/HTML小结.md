@@ -58,7 +58,7 @@ src主要应用于img、script、iframe等元素，href应用于link和a等元�
 
 **问：讲讲meta标签**
 
-答：meta标签用来定义页面元数据，描述网页文档属性，可以指定页面的字符编码、视口设置、搜索引擎优化。比如 meta的charset为"UTF-8" 表示页面使用 UTF-8 编码a。
+答：meta标签用来定义页面元数据，描述网页文档属性，可以指定页面的字符编码、视口设置、搜索引擎优化。比如 meta的charset为"UTF-8" 表示页面使用 UTF-8 编码。
 
 charset(文档编码）、keywords（关键词）、description（页面描述）、refresh（页面重定向和刷新）、viewport（适配移动端，控制视口大小和比例）
 
