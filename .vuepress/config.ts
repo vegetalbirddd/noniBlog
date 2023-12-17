@@ -5,6 +5,7 @@ import recoTheme from "vuepress-theme-reco";
 export default defineUserConfig({
   title: "noni's blog",
   description: "一个博客，主要分享前端知识~😊",
+  base: '/noniBlog/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
