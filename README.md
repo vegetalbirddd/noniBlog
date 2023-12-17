@@ -11,4 +11,5 @@ blog:
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/vegetalbirddd' }
     - { icon: 'User', link: 'docs/myself.html'}
+    - { icon: 'Wikis', link: 'https://github.com/vegetalbirddd/noniBlog' }
 ---
