@@ -33,5 +33,14 @@ export default defineUserConfig({
       { text: '时间轴', link: '/timeline', icon: 'Time' },
       { text: '留言板', link: '/docs/message-board', icon: 'Chat' }
     ],
-  })
+    themeConfig: {
+      vssueConfig: {
+        platform: 'github',
+        owner: 'vegetalbirddd',
+        repo: 'noniBlog',
+        clientId: 'ce9b59c209f626b89da8',
+        clientSecret: 'cd4d6eb35f994491c63d0e34d65370e967fd7b6e',
+      }
+    } 
+  }),
 });
