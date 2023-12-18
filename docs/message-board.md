@@ -7,3 +7,5 @@ hideComments: false
 ::: info
 Hello~
 :::
+
+<CommentService />
