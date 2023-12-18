@@ -40,7 +40,7 @@ export default defineUserConfig({
         repoId: 'R_kgDOK6fArw',
         category: 'Show and tell',
         categoryId: 'DIC_kwDOK6fAr84Cb18g',
-        mapping: 'pathname',
+        mapping: 'title',
         strict: '0',
         lang: 'zh-CN',
         crossorigin: 'anonymous'
