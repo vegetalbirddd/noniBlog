@@ -1,6 +1,6 @@
 ---
-title: HTML速记
-date: 2023-12-14
+title: HTML小结
+date: 2023-8-17
 tags:
  - 前端
  - HTML

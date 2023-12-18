@@ -16,7 +16,7 @@ export default defineUserConfig({
     authorAvatar: "/head.png",
     docsBranch: "main",
     docsDir: "blogs",
-    lastUpdatedText: "",
+    lastUpdatedText: "最近更新",
     navbar: [
       { text: "首页", link: "/", icon: "Home" },
       {
