@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-ac38f14c","path":"/tags/Vuezhishixiaodian/1/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{a as data};
