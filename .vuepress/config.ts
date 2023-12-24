@@ -25,6 +25,7 @@ export default defineUserConfig({
           { text: "HTML", link: '/categories/HTML/1/' },
           { text: "css", link: '/categories/CSS/1/' },
           { text: "JavaScript", link: '/categories/JavaScript/1/' },
+          { text: "ES6", link: '/categories/ES6/1/' },
           { text: "Vue", link: '/categories/Vue/1/' },
           { text: "计算机网络", link: '/categories/computerNetwork/1/' },
         ]
