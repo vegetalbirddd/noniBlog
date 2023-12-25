@@ -1,5 +1,5 @@
 ---
-title: 手写Call
+title: 手写Call、bind
 date: 2023-11-13
 tags:
  - 前端
