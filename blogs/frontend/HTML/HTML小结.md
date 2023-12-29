@@ -1,6 +1,6 @@
 ---
 title: HTML小结
-date: 2023-8-17
+date: 2023-08-17
 tags:
  - 前端
  - HTML
