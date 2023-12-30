@@ -27,7 +27,7 @@ export default defineUserConfig({
           { text: "JavaScript", link: '/categories/JavaScript/1/' },
           { text: "ES6", link: '/categories/ES6/1/' },
           { text: "Vue", link: '/categories/Vue/1/' },
-          { text: "计算机网络", link: '/categories/computerNetwork/1/' },
+          { text: "计算机网络", link: '/categories/jisuanjiwangluo/1/' },
         ]
       },
       { text: "标签", link: "/tags/qianduan/1/", icon: "Tag" },
