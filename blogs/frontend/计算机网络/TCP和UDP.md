@@ -9,5 +9,5 @@ categories:
  - 计算机网络
 ---
 
-## TCP和UDP
+## 思维导图
 ![图片](../../../.vuepress/public/mindMap/TCPandUDP.png)
