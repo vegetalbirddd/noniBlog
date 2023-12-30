@@ -10,6 +10,6 @@ categories:
 ---
 
 ## flex
-![图片](../../../.vuepress/public/img/flex.png)
+![图片](../../../.vuepress/public/mindMap/flex.png)
 ## grid
-![图片](../../../.vuepress/public/img/grid.png)
+![图片](../../../.vuepress/public/mindMap/grid.png)
