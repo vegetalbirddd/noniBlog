@@ -1,3 +1,14 @@
+---
+title: hash模式和history模式
+date: 2024-01-02
+tags:
+ - 前端
+ - Vue
+ - Vue知识小点
+categories:
+ - Vue
+---
+
 # hash模式和history模式
 
 Vue中的router有两种模式：hash模式（默认）、history模式（需配置mode: 'history'）
