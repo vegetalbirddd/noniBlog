@@ -28,6 +28,7 @@ export default defineUserConfig({
           { text: "ES6", link: '/categories/ES6/1/' },
           { text: "Vue", link: '/categories/Vue/1/' },
           { text: "计算机网络", link: '/categories/jisuanjiwangluo/1/' },
+          { text: "浏览器", link: '/categories/liulanqi/1/' },
         ]
       },
       { text: "标签", link: "/tags/qianduan/1/", icon: "Tag" },
