@@ -12,6 +12,8 @@ categories:
 
 ## HTTP缓存
 
+![图片](../../../.vuepress/public/mindMap/HTTPcacheHeaderField.png)
+
 ### 为什么缓存
 
 把请求响应的数据缓存在本地，下次请求前直接读取本地数据，不需要再获取服务器相应，提高性能。HTTP缓存技术有：**强缓存**和**协商缓存**
