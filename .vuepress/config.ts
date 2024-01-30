@@ -17,10 +17,21 @@ export default defineUserConfig({
     docsBranch: "main",
     docsDir: "blogs",
     lastUpdatedText: "最近更新",
+    series: {
+      "/blogs/notes/": [
+        {
+          text: "《JavaScript高级程序设计》",
+          children: [
+            { text: "第一章", link: '/blogs/notes/hbs/笔记测试.html' },
+            { text: "第二章", link: '/blogs/notes/介绍.html' },
+            ],
+        },
+      ],
+    },
     navbar: [
       { text: "首页", link: "/", icon: "Home" },
       {
-        text: "分类", link: "/categories/",
+        text: "文章", link: "/categories/",
         children: [
           { text: "HTML", link: '/categories/HTML/1/' },
           { text: "css", link: '/categories/CSS/1/' },
@@ -31,6 +42,7 @@ export default defineUserConfig({
           { text: "浏览器", link: '/categories/liulanqi/1/' },
         ]
       },
+      { text: "学习笔记", link: "/blogs/notes/介绍.html" },
       { text: "标签", link: "/tags/qianduan/1/", icon: "Tag" },
       { text: '时间轴', link: '/timeline', icon: 'Time' },
       { text: '留言板', link: '/docs/message-board', icon: 'Chat' }
