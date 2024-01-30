@@ -1,0 +1,1 @@
+import{_ as e,o as c,c as t,d as s}from"./app-89e13fc4.js";const o={},_=s("p",null,"测试",-1),n=[_];function i(r,a){return c(),t("div",null,n)}const d=e(o,[["render",i],["__file","bijiceshi.html.vue"]]);export{d as default};
