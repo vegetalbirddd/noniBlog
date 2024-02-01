@@ -23,7 +23,6 @@ export default defineUserConfig({
           text: "《JavaScript高级程序设计》",
           children: [
             { text: "第一章", link: '/blogs/notes/hbs/1-1.html' },
-            { text: "第二章", link: '/blogs/notes/介绍.html' },
             ],
         },
       ],
