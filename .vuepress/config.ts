@@ -22,7 +22,8 @@ export default defineUserConfig({
         {
           text: "《JavaScript高级程序设计》",
           children: [
-            { text: "第一章", link: '/blogs/notes/hbs/1-1.html' },
+            { text: "第1章 什么是JavaScript", link: '/blogs/notes/hbs/1-1.html' },
+            { text: "第2章 HTML中的JavaScript", link: '/blogs/notes/hbs/2-1.html' },
             ],
         },
       ],
