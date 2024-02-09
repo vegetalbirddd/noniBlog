@@ -20,10 +20,11 @@ export default defineUserConfig({
     series: {
       "/blogs/notes/": [
         {
-          text: "《JavaScript高级程序设计》",
+          text: "《JavaScript高级程序设计》(4版)",
           children: [
             { text: "第1章 什么是JavaScript", link: '/blogs/notes/hbs/1-1.html' },
             { text: "第2章 HTML中的JavaScript", link: '/blogs/notes/hbs/2-1.html' },
+            { text: "第3章 语言基础", link: '/blogs/notes/hbs/3-1.html' },
             ],
         },
       ],
