@@ -25,6 +25,7 @@ export default defineUserConfig({
             { text: "第1章 什么是JavaScript", link: '/blogs/notes/hbs/1-1.html' },
             { text: "第2章 HTML中的JavaScript", link: '/blogs/notes/hbs/2-1.html' },
             { text: "第3章 语言基础", link: '/blogs/notes/hbs/3-1.html' },
+            { text: "第4章 变量、作用域与内存", link: '/blogs/notes/hbs/4-1.html' },
             ],
         },
       ],
