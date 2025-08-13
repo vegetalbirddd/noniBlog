@@ -28,6 +28,12 @@ export default defineUserConfig({
             { text: "第4章 变量、作用域与内存", link: '/blogs/notes/hbs/4-1.html' },
             ],
         },
+        {
+          text: "手写系列",
+          children: [
+            { text: "手写JavaScriptAPI", link: '/blogs/notes/jsCode/手写api.html' },
+          ],
+        },
       ],
     },
     navbar: [
