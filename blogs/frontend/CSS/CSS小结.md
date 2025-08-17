@@ -72,4 +72,13 @@ CSS的选择器里，id选择器的优先级最高，优先级权重为100；其
 
 
 
-#### 
+### 5、盒模型
+
+组成：由content、padding、border、margin组成
+
+#### 种类
+
+`box-sizing: content-box`（标准盒）：宽高只由内容决定
+
+`box-sizing: border-box`（IE盒）：宽高由内容、border、padding决定
+
