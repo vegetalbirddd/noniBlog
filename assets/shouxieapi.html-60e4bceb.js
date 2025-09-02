@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-6929a16a","path":"/blogs/notes/jsCode/shouxieapi.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"createdTime":1755582376000,"updatedTime":1755582376000,"contributors":[{"name":"NONI","email":"1063030602@qq.com","commits":1}]},"filePathRelative":"blogs/notes/jsCode/手写api.md"}');export{e as data};
