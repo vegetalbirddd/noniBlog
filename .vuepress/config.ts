@@ -35,6 +35,14 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/interview/": [
+        {
+          text: "JavaScript底层基础",
+          children: [
+            { text: "JavaScript底层基础", link: '/blogs/interview/js底层基础/js-note.html' },
+            ],
+        },
+      ]
     },
     navbar: [
       { text: "首页", link: "/", icon: "Home" },
@@ -49,9 +57,11 @@ export default defineUserConfig({
           { text: "计算机网络", link: '/categories/jisuanjiwangluo/1/' },
           { text: "浏览器", link: '/categories/liulanqi/1/' },
           { text: "算法笔记", link: '/categories/suanfa/1/' },
+          { text: "工程化", link: '/categories/gongchenghua/1/' },
         ]
       },
       { text: "学习笔记", link: "/blogs/notes/介绍.html" },
+      { text: "面试准备", link: "/blogs/interview/介绍.html" },
       { text: "标签", link: "/tags/qianduan/1/", icon: "Tag" },
       { text: '时间轴', link: '/timeline', icon: 'Time' },
       { text: '留言板', link: '/docs/message-board', icon: 'Chat' }

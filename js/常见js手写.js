@@ -7,3 +7,8 @@ const deepcopy = function(obj) {
     }
     return res;
 }
+
+// 解析URL参数为对象
+function parseParams(url) {
+    
+}
