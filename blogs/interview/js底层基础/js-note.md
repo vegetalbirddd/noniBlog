@@ -248,6 +248,56 @@ fn();
 JavaScript 是单线程的，事件循环用于协调同步任务和异步任务的执行。同步代码会先进入调用栈执行，异步任务（如定时器、网络请求）会交给宿主环境处理，完成后将回调放入任务队列。
 
 任务队列分为宏任务和微任务，事件循环在每一轮中会先清空所有微任务，然后再执行一个宏任务，之后再继续处理微任务，如此循环。
+### 微任务在 AI 流式渲染中的影响
+
+> 1. 执行同步代码（主线程）
+> 2. 执行当前宏任务队列中的一个任务
+> 3. 清空所有微任务队列
+> 4. 进行一次 UI 渲染（浏览器）
+> 5. 进入下一轮循环
+
+> `requestAnimationFrame` 既不是宏任务，也不是微任务，它属于浏览器的渲染调度机制，在下一次重绘之前执行。
+
+####  1. 用宏任务让出渲染机会
+
+``` js
+setTimeout(() => {  render(chunk);}, 0);
+```
+
+👉 让浏览器：
+
+- 有机会渲染
+- 保持流畅
+
+---
+
+####  2. 使用 requestAnimationFrame（推荐）
+
+``` js
+requestAnimationFrame(() => {  render(chunk);});
+```
+
+👉 优点：
+
+- 在渲染前执行
+- 更平滑
+
+---
+
+#### 3. 分批处理（节流）
+
+``` js
+buffer.push(chunk);
+if (!scheduled) { 
+   scheduled = true;  
+   requestAnimationFrame(() => {    
+	  flush(buffer);
+	  scheduled = false;  
+  });
+}
+```
+
+`requestAnimationFrame` 更适合流式渲染，因为它在浏览器下一次重绘前执行，与屏幕刷新节奏同步，能够保证更新时机正确且避免不必要的重排和卡顿，而 `setTimeout` 无法感知渲染时机，容易造成掉帧或过度渲染。
 
 ### promise
 #### 解决了回调地狱
@@ -303,5 +353,58 @@ p.then(a).then(b)
 
 - **每个 then 返回一个新的 Promise**
 - 上一个结果传给下一个
+
+
+#### 手写
+```js
+promise.all = function (promises) {
+	return new Promise((resolve, reject) => {
+		let count = 0;
+		const result = [];
+		
+		if(promises.length === 0) return resolve([]);
+		
+		promises.forEach((p, i) => {
+			Promise.resolve(p).then(res => {
+				result[i] = res;
+				count++
+				if (count === promises.length) {
+					return resolve(result)
+				}
+			}, reject)
+		})
+	})
+}
+```
+
+
+## proxy
+
+### 什么是proxy（proxy的核心作用）
+Proxy 是 ES6 提供的一种元编程能力，用于创建对象的代理，可以拦截并自定义对象的基本操作，比如属性访问、赋值、删除等。与 Object.defineProperty 不同，Proxy 是对对象整体行为的拦截，而不是单个属性的劫持，因此可以更完整地控制对象行为，常用于实现响应式系统、权限控制等场景。
+
+### Proxy 和 Object.defineProperty 的区别是什么？为什么 Vue3 要用 Proxy？
+Proxy 是对对象整体行为的拦截，而 Object.defineProperty 是对单个属性的劫持。在能力上，defineProperty 只能劫持已有属性，无法监听新增和删除属性，同时在数组场景下也存在局限，需要通过重写数组方法来实现响应式。而 Proxy 可以从对象层面统一拦截包括属性读取、赋值、删除以及数组变化等操作。此外，defineProperty 需要递归遍历对象进行劫持，而 Proxy 支持按需代理，性能更优。因此 Vue3 使用 Proxy 来实现更完整和高效的响应式系统。
+
+### 为什么 Proxy 必须要配合 Reflect 使用？不用 Reflect 会有什么问题？
+reflect封装了对对象的一些基本操作方法，他能够标准化“对象操作API”，和proxy配合后是为了保证拦截后的默认行为可以正常执行。
+Proxy 和 Reflect 成对出现，是因为 Proxy 负责拦截操作，而 Reflect 负责以标准语义执行默认行为；如果不使用 Reflect，容易破坏 JavaScript 内部语义（如 this 绑定、返回值规范、原型链行为等）。
+
+### 为什么proxy不能polyfill
+因为proxy拦截的是js引擎内部的基本语义操作，而polyfill是在语言的API层进行操作。
+
+## Module模块
+### 模块解决什么问题
+js全局变量污染；代码耦合严重；难以复用
+本质上是：用作用域隔离 + 显式导出，解决全局污染问题
+
+
+
+
+
+
+
+
+
 
 
