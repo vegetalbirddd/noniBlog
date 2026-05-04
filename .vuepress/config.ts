@@ -37,9 +37,10 @@ export default defineUserConfig({
       ],
       "/blogs/interview/": [
         {
-          text: "JavaScript底层基础",
+          text: "前端",
           children: [
             { text: "JavaScript底层基础", link: '/blogs/interview/js底层基础/js-note.html' },
+            { text: "手写题集合", link: '/blogs/interview/js底层基础/手写集合.html'},
             ],
         },
       ]
