@@ -418,3 +418,39 @@ b.name = "Alice"; // 修改堆中对象的值
 https://www.cnblogs.com/songyao666/p/17476864.html
 标记清除：标记可达对象，然后清除不可达对象。缺点会有内存碎片化（对象在内存中的分布不连续），所以可以引入标记整理，把剩下的活跃对象移动到一起，以减少内存碎片。
 引用计数：变量值被赋值引用值+1，变量值被覆盖引用值-1，如果引用值为0就被清除。缺点是不能解决循环引用无法回收的问题、计数器占位大的问题。
+
+## 链式调用
+基本概念：可以在同一个对象上调用多个 方法，每个方法调用都会返回对象。通常链式调用的实现依赖于每个方法返回 **当前对象** 或 **当前对象的一个副本**，以支持后续方法的调用。
+### 手写
+```js
+function Person(name) {
+  this.name = name;
+  this.age = 0;
+}
+
+// 设置 name 的方法
+Person.prototype.setName = function(name) {
+  this.name = name;
+  return this;  // 返回当前对象，支持链式调用
+};
+
+// 设置 age 的方法
+Person.prototype.setAge = function(age) {
+  this.age = age;
+  return this;  // 返回当前对象，支持链式调用
+};
+
+// 打印信息的方法
+Person.prototype.printInfo = function() {
+  console.log(`Name: ${this.name}, Age: ${this.age}`);
+  return this;  // 返回当前对象，支持链式调用
+};
+
+// 使用链式调用
+const person = new Person("John");
+
+person
+  .setName("Alice")
+  .setAge(25)
+  .printInfo();  // 输出: Name: Alice, Age: 25
+```

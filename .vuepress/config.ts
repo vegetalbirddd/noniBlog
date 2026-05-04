@@ -39,10 +39,16 @@ export default defineUserConfig({
         {
           text: "前端",
           children: [
-            { text: "JavaScript底层基础", link: '/blogs/interview/js底层基础/js-note.html' },
-            { text: "手写题集合", link: '/blogs/interview/js底层基础/手写集合.html'},
-            ],
+            { text: "JavaScript底层基础", link: '/blogs/interview/前端八股/js-note.html' },
+            { text: "手写题集合", link: '/blogs/interview/前端八股/手写集合.html'},
+          ],
         },
+        {
+          text: "浏览器和网络",
+          children: [
+            { text: "浏览器和网络", link: '/blogs/interview/浏览器和网络/浏览器和网络.html' },
+          ],
+        }
       ]
     },
     navbar: [
