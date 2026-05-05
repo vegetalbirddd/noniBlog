@@ -354,6 +354,34 @@ p.then(a).then(b)
 - **每个 then 返回一个新的 Promise**
 - 上一个结果传给下一个
 
+#### 静态方法
+##### Promise.all(iterable) 
+ - 都成功时才成功
+ * 这个方法返回一个新的promise对象，该promise对象在iterable参数对象里所有的promise对象都成功的时候才会触发成功，
+ * 一旦有任何一个iterable里面的promise对象失败则立即触发该promise对象的失败。
+ * 如果这个新的promise对象触发了失败状态，它会把iterable里第一个触发失败的promise对象的错误信息作为它的失败错误信息。
+
+##### Promise.allSettled(iterable) ES2020
+ * 等到所有promises都已敲定（settled）（每个promise都已兑现（fulfilled）或已拒绝（rejected））。
+ * 返回一个promise，该promise在所有promise完成后完成。并带有一个对象数组，每个对象对应每个promise的结果。
+ * 当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个promise的结果时，通常使用它。
+ * 相比之下，Promise.all() 更适合彼此相互依赖或者在其中任何一个reject时立即结束。
+
+##### Promise.any(iterable) 一个成功即返回 ES2021
+ * 接收一个Promise对象的集合，当其中的一个 promise 成功，就返回那个成功的promise的值。
+ * 本质上，这个方法和Promise.all()是相反的。仅在所有承诺均被拒绝的情况下拒绝。
+
+##### Promise.race(iterable) 
+- **不管结果本身是成功还是失败**。哪个子promise执行的快就返回那个子promise的结果(失败或成功的结果)
+ * 当iterable参数里的任意一个子promise被成功或失败后，父promise马上也会用子promise的成功返回值或失败详情
+ * 作为参数调用父promise绑定的相应句柄，并返回该promise对象。
+
+##### Promise.resolve(value)
+ * 返回一个状态由给定value决定的Promise对象
+
+##### Promise.reject(reason)
+ * 返回一个状态为失败的Promise对象
+
 
 #### 手写
 ```js
