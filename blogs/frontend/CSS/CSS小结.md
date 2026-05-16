@@ -40,7 +40,13 @@ CSS的选择器里，id选择器的优先级最高，优先级权重为100；其
 >
 > ::before 和 ::after 相当于 在 element 和 content 之间多了两个图层，改善了 CSS 布局能力的不足,且 ::before 和 ::after 属性中必须有 'content:' 属性，content 属性可以为空 ''
 
-
+``` html
+  <div class="box">
+    ::before
+    content（原本的文本/子节点）
+    ::after
+  </div>
+```
 
 ### display相关
 
