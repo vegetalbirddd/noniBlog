@@ -49,7 +49,13 @@ export default defineUserConfig({
           children: [
             { text: "浏览器和网络", link: '/blogs/interview/浏览器和网络/浏览器和网络.html' },
           ],
-        }
+        },
+        {
+          text: "话术积累",
+          children: [
+            { text: "话术积累", link: '/blogs/interview/话术积累/话术积累.html' },
+          ],
+        },
       ]
     },
     navbar: [
