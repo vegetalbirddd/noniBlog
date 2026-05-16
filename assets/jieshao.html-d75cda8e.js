@@ -1,1 +1,0 @@
-import{_ as o,o as t,c as s,d as e}from"./app-4fb50d5c.js";const _={},c=e("p",null,"5.16",-1),n=e("p",null,"小芸也要离开西安了",-1),l=e("p",null,"自己也要快点啦",-1),a=[c,n,l];function r(i,d){return t(),s("div",null,a)}const u=o(_,[["render",r],["__file","jieshao.html.vue"]]);export{u as default};
