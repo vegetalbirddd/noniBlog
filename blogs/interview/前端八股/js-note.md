@@ -485,3 +485,64 @@ person
   .setAge(25)
   .printInfo();  // 输出: Name: Alice, Age: 25
 ```
+
+## RAF
+
+前端 RAF = requestAnimationFrame，浏览器提供的高性能动画 API，核心是跟着屏幕刷新率走、自动节能、精确渲染。
+
+一、核心机制（怎么工作）
+
+• 执行时机：事件循环里独立阶段，在「当前任务+微任务跑完 → 样式/布局/绘制之前」执行。
+
+• 刷新率对齐：
+
+◦ 60Hz：≈16.7ms/帧（最常见）
+
+◦ 90Hz：≈11.1ms
+
+◦ 120Hz：≈8.3ms
+
+• 自动暂停：切后台/隐藏标签页时自动停掉，省 CPU、电池。
+
+• 高精度时间戳：回调会收到 timestamp（微秒级），用来算真实动画进度，做到帧率无关。
+
+二、和 setTimeout 的关键区别
+
+• 帧率：RAF 跟随屏幕，稳定 60fps；setTimeout 固定间隔，易丢帧、卡顿。
+
+• 后台：RAF 自动暂停；setTimeout 照样跑，耗电。
+
+• 渲染时机：RAF 在下次重绘前；setTimeout 不绑定渲染，可能白跑。
+
+• 合并优化：多个 RAF 回调会合并到一次重绘，减少回流重绘。
+
+三、基本用法（最简循环）
+
+``` js
+// 启动
+function animate(timestamp) {
+  // 1. 计算/更新样式
+  // 2. 绘制（DOM / Canvas / WebGL）
+  // 3. 继续下一帧
+  requestAnimationFrame(animate);
+}
+const id = requestAnimationFrame(animate);
+
+// 停止
+cancelAnimationFrame(id);
+```
+
+四、适用场景
+
+• 网页动画、进度条、滚动联动
+
+• Canvas / WebGL 游戏、图表渲染
+
+• 拖拽、实时预览、视频帧处理
+
+五、一句话总结
+
+RAF = 浏览器帮你“预约下次画图前那一刻”执行动画，流畅、省电、不卡顿。
+
+要不要我给你一段可直接运行的 RAF 动画示例（含启动/停止/时间戳计算进度）？
+
