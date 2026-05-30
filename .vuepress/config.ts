@@ -42,6 +42,7 @@ export default defineUserConfig({
             { text: "JavaScript底层基础", link: '/blogs/interview/前端八股/js-note.html' },
             { text: "手写题集合", link: '/blogs/interview/前端八股/手写集合.html'},
             { text: "前端工程化", link: '/blogs/interview/前端八股/工程化.html'},
+            { text: "react", link: '/blogs/interview/前端八股/react.html'},
           ],
         },
         {
