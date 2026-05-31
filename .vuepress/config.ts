@@ -56,6 +56,7 @@ export default defineUserConfig({
           children: [
             { text: "话术积累", link: '/blogs/interview/面试专项/话术积累.html' },
             { text: "简历项目解读", link: '/blogs/interview/面试专项/简历项目解读.html' },
+            { text: "项目框架梳理", link: '/blogs/interview/面试专项/项目框架梳理.html' },
           ],
         },
       ]
